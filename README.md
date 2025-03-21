@@ -1,26 +1,35 @@
 # Cost-Effective DevOps: Running Jenkins, SonarQube, and Docker on a Single Host
 # 1. Set Up the Server
 Ensure you have a Linux-based server (e.g., Ubuntu, CentOS, etc.).
-
 Update the system: 
-sudo apt update && sudo apt upgrade -y
+
+sudo apt update &
+
+sudo apt upgrade -y
 
 # 2.  Install Docker
 Docker will be used to containerize Jenkins and SonarQube, making it easier to manage and isolate their environments.
+Install Docker Start and enable Docker: 
 
-Install Docker: sudo apt install docker.io -y
-Start and enable Docker: sudo systemctl start docker
+sudo apt install docker.io -y 
+
+sudo systemctl start docker
+
 sudo systemctl enable docker
 
 # 3.  Grant permissions to $USER to use docker
 sudo su - 
+
 usermod -aG docker ubuntu
+
 systemctl restart docker
+
 Logout and login back and try using docker commands without sudo
 
 # 4.  Run Jenkins in a Docker Container
 Jenkins can be easily deployed using its official Docker image.
 Pull the Jenkins Docker image and Run the Jenkins container:
+
 docker pull jenkins/jenkins:lts
 docker run -d \
   --name jenkins \
@@ -33,6 +42,7 @@ docker run -d \
 
 # 5.  Acess Jenkins
 On the Jenkins UI you would have to in put the password
+
 docker exec <container_name_or_id> cat /var/jenkins_home/secrets/initialAdminPassword
 
 # 6.  Run SonarQube in a Docker Container
