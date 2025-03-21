@@ -1,1 +1,3 @@
-# The Power of Three: Jenkins, SonarQube, and Docker in One Place
+# Cost-Effective DevOps: Running Jenkins, SonarQube, and Docker on a Single Host
+
+
