@@ -1,4 +1,12 @@
 # Cost-Effective DevOps: Running Jenkins, SonarQube, and Docker on a Single Host
+In this project i decided to run jenkins and sonarqube as a conntainer for the following reasons:
+
+- Official Docker images for Jenkins and SonarQube are available, making it easy to get started without manual installation.
+
+- You can run Jenkins, SonarQube, and other tools on a single server, reducing infrastructure costs.
+
+- Running Jenkins and SonarQube as containers provides isolation, portability, simplified setup, resource efficiency, and easy integration with CI/CD pipelines. It’s a modern, efficient, and scalable approach to managing DevOps tools.
+
 # 1. Set Up the Server
 Ensure you have a Linux-based server (e.g., Ubuntu, CentOS, etc.).
 Update the system: 
